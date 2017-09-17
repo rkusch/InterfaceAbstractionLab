@@ -6,7 +6,10 @@
 package lab2;
 
 /**
- * I think that using an interface class as a super class creates more work for the programmer. My reasoning for the is that each sub-class needs to contain common properties and methods that should be placed in the super-class.
+ * I think that using an interface class as a super class creates more work for
+ * the programmer. My reasoning for the is that each sub-class needs to contain
+ * common properties and methods that should be placed in the super-class.
+ *
  * @author kusch
  */
 public class Startup {

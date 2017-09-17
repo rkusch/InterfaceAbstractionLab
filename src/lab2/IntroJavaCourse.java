@@ -12,7 +12,6 @@ public class IntroJavaCourse implements Course {
     private double courseCredits;
     private String coursePrerequisites;
 
-
     @Override
     public String getCourseName() {
         return courseName;
@@ -26,14 +25,13 @@ public class IntroJavaCourse implements Course {
         this.courseName = courseName;
     }
 
-
     @Override
     public String getCourseNumber() {
         return courseNumber;
     }
 
     @Override
-      public final void setCourseNumber(String courseNumber) {
+    public final void setCourseNumber(String courseNumber) {
         if (courseNumber == null || courseNumber.length() == 0) {
             throw new IllegalArgumentException("Error: courseNumber cannot be null of empty string");
         }
@@ -46,7 +44,7 @@ public class IntroJavaCourse implements Course {
     }
 
     @Override
-       public void setCourseCredits(double credits) {
+    public void setCourseCredits(double credits) {
         if (credits < 0.5 || credits > 4.0) {
             throw new IllegalArgumentException("Error: credits must be in the range 0.5 to 4.0");
         }
@@ -62,8 +60,8 @@ public class IntroJavaCourse implements Course {
     public void setCoursePrerequisites(String prerequisites) {
         this.coursePrerequisites = prerequisites;
     }
-    
-          public IntroJavaCourse(String courseName, String courseNumber, double courseCredits) {
+
+    public IntroJavaCourse(String courseName, String courseNumber, double courseCredits) {
         setCourseName(courseName);
         setCourseNumber(courseNumber);
         setCourseCredits(courseCredits);
