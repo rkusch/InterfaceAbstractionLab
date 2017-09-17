@@ -5,8 +5,6 @@
  */
 package lab1;
 
-import javax.swing.JOptionPane;
-
 /**
  *
  * @author rkusch
@@ -23,9 +21,7 @@ public abstract class Course {
 
     public final void setCourseName(String courseName) {
         if (courseName == null || courseName.length() == 0) {
-            JOptionPane.showMessageDialog(null,
-                    "Error: courseName cannot be null of empty string");
-            System.exit(0);
+            throw new IllegalArgumentException("Error: courseName cannot be null of empty string");
         }
         this.courseName = courseName;
     }
