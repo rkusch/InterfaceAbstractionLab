@@ -11,8 +11,8 @@ import javax.swing.JOptionPane;
 public class AdvancedJavaCourse {
     private String courseName;
     private String courseNumber;
-    private double credits;
-    private String prerequisites;
+    private double courseCredits;
+    private String coursePrerequisites;
 
     public AdvancedJavaCourse(String courseName, String courseNumber) {
         this.setCourseName(courseName);
