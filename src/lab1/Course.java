@@ -14,8 +14,8 @@ import javax.swing.JOptionPane;
 public abstract class Course {
     private String courseName;
     private String courseNumber;
-    private double credits;
-    private String prerequisites;
+    private double courseCredits;
+    private String coursePrerequisites;
 
     public String getCourseName() {
         return courseName;
@@ -43,22 +43,22 @@ public abstract class Course {
     }
 
     public double getCredits() {
-        return credits;
+        return courseCredits;
     }
 
        public void setCredits(double credits) {
         if (credits < 0.5 || credits > 4.0) {
             throw new IllegalArgumentException("Error: credits must be in the range 0.5 to 4.0");
         }
-        this.credits = credits;
+        this.courseCredits = credits;
     }
 
     public String getPrerequisites() {
-        return prerequisites;
+        return coursePrerequisites;
     }
 
     public void setPrerequisites(String prerequisites) {
-        this.prerequisites = prerequisites;
+        this.coursePrerequisites = prerequisites;
     }
     
     
