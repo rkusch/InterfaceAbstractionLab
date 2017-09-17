@@ -42,22 +42,22 @@ public abstract class Course {
         this.courseNumber = courseNumber;
     }
 
-    public double getCredits() {
+    public double getCourseCredits() {
         return courseCredits;
     }
 
-       public void setCredits(double credits) {
+       public void setCourseCredits(double credits) {
         if (credits < 0.5 || credits > 4.0) {
             throw new IllegalArgumentException("Error: credits must be in the range 0.5 to 4.0");
         }
         this.courseCredits = credits;
     }
 
-    public String getPrerequisites() {
+    public String getCoursePrerequisites() {
         return coursePrerequisites;
     }
 
-    public void setPrerequisites(String prerequisites) {
+    public void setCoursePrerequisites(String prerequisites) {
         this.coursePrerequisites = prerequisites;
     }
     

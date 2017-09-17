@@ -4,27 +4,26 @@ import javax.swing.JOptionPane;
 
 /**
  * Describe responsibilities here.
+ * This class has prerequisites!
  *
- * @author      your name goes here
- * @version     1.00
+ * @author Ryan Kusch
+ * @version 1.00
  */
-public class AdvancedJavaCourse extends Course{
-
-    public AdvancedJavaCourse(String courseName, String courseNumber) {
-        setCourseName(courseName);
-        setCourseNumber(courseNumber);
-    }
-
+public class AdvancedJavaCourse extends Course {
 
     @Override
-    public void setCredits(double credits) {
-        if(credits < 0.5 || credits > 4.0) {
-            JOptionPane.showMessageDialog(null,
-                    "Error: credits must be in the range 0.5 to 4.0");
-            System.exit(0);
+    public void setCoursePrerequisites(String coursePrerequisites) {
+        if (coursePrerequisites == null) {
+            throw new IllegalArgumentException("Error: prerequisites cannot be null of empty string");
         }
-        setCredits(credits);
+        super.setCoursePrerequisites(coursePrerequisites);
     }
 
-    
+    public AdvancedJavaCourse(String courseName, String courseNumber, String coursePrerequisites, double courseCredits) {
+        setCourseName(courseName);
+        setCourseNumber(courseNumber);
+        setCoursePrerequisites(coursePrerequisites);
+        setCourseCredits(courseCredits);
+    }
+
 }
