@@ -11,14 +11,8 @@ import javax.swing.JOptionPane;
  */
 public class AdvancedJavaCourse extends Course {
 
-    @Override
-    public void setCoursePrerequisites(String coursePrerequisites) {
-        if (coursePrerequisites == null) {
-            throw new IllegalArgumentException("Error: prerequisites cannot be null of empty string");
-        }
-        super.setCoursePrerequisites(coursePrerequisites);
-    }
 
+// added a setCoursePrerequisites becuase this course has prerequisites
     public AdvancedJavaCourse(String courseName, String courseNumber, String coursePrerequisites, double courseCredits) {
         setCourseName(courseName);
         setCourseNumber(courseNumber);

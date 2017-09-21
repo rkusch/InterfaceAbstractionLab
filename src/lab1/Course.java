@@ -15,7 +15,7 @@ public abstract class Course {
     private double courseCredits;
     private String coursePrerequisites;
 
-    public String getCourseName() {
+    public final String getCourseName() {
         return courseName;
     }
 
@@ -27,7 +27,7 @@ public abstract class Course {
     }
 
 
-    public String getCourseNumber() {
+    public final String getCourseNumber() {
         return courseNumber;
     }
 
@@ -38,25 +38,26 @@ public abstract class Course {
         this.courseNumber = courseNumber;
     }
 
-    public double getCourseCredits() {
+    public final double getCourseCredits() {
         return courseCredits;
     }
 
-       public void setCourseCredits(double credits) {
+       public final void setCourseCredits(double credits) {
         if (credits < 0.5 || credits > 4.0) {
             throw new IllegalArgumentException("Error: credits must be in the range 0.5 to 4.0");
         }
         this.courseCredits = credits;
     }
 
-    public String getCoursePrerequisites() {
+    public final String getCoursePrerequisites() {
         return coursePrerequisites;
     }
 
-    public void setCoursePrerequisites(String prerequisites) {
-        this.coursePrerequisites = prerequisites;
+    public final void setCoursePrerequisites(String prerequisites) {
+        if (prerequisites == null) {
+            this.coursePrerequisites="No Prerequisites";
+        }
+    }
     }
     
-    
-    
-}
+
